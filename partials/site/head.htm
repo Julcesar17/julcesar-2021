@@ -1,0 +1,23 @@
+description = "Partial de HEAD del sitio"
+==
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png' | theme }}">
+    <title>{{ this.page.title }} | Julio Herrera</title>
+    <meta name="title" content="{{ this.page.meta_title }}" />
+    <meta name="description" content="{{this.page.meta_description}}" />
+
+    <meta property="og:title"       content="{{ this.page.meta_title }}" />
+    <meta property="og:description" content="{{this.page.meta_description}}" />
+    <meta property="og:url"         content="{{ ''| page }}" />
+    <meta property="og:type"        content="website" />
+    <meta property="og:image"       content="#" />
+    <meta property="og:locale"       content="es_MX" />
+
+    <meta name="author" content="Julio Herrera" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="OctoberCMS" />
+
+    <link href="{{ 'assets/css/index.css'|theme }}?v={{uniqueID}}" rel="stylesheet" />
+
+</head>

@@ -1,0 +1,30 @@
+description = "Layout default"
+==
+function onStart(){
+    $this['scriptVersion'] = uniqid();
+    $this['uniqueID'] = uniqid();
+    $this['currentSiteURL'] = Config::get('app.url');
+}
+==
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="es">
+{% partial 'site/head' %}
+<body id="el-body" class="body-page-{{this.page.id}}">
+
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+
+    <section id="layout-page">
+        {% page %}
+    </section>
+
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+
+    {% partial 'site/footer-scripts' %}
+</body>
+</html>
+{% endspaceless %}
